@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Mali"
+		/>
+		<title>Coffee</title>
+		<style>
+			body {
+				background: linear-gradient(#d77c58, #f0dfd0);
+				background-repeat: no-repeat;
+				padding: 0;
+				margin: 0;
+				font-family: "Mali", serif;
+				box-sizing: border-box;
+			}
+			.cafe-card {
+				width: 50%;
+				background-color: #d77c58;
+				margin: 20px auto;
+				border-radius: 20px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			}
+			header {
+				padding: 5px 10px;
+				height: 100px;
+				color: #7a4539;
+				text-align: center;
+				background-color: #f0dfd0;
+				border-radius: 20px 20px 0 0;
+			}
+
+			.logo {
+				display: block;
+				font-size: 40px;
+			}
+
+			.main {
+				margin: 20px auto;
+			}
+
+			.img {
+				display: block;
+				width: 300px;
+				margin: 20px auto 10px;
+				border-radius: 10px;
+			}
+
+			.menu {
+				background-color: #7a4539;
+				display: block;
+				width: 60%;
+				max-width: 400px;
+				height: 84px;
+				margin: 40px 20%;
+				padding: 10px;
+				text-align: center;
+				border-radius: 10px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			}
+			ul {
+				list-style: none;
+				display: inline;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+			li {
+				display: inline;
+				margin-right: 40px;
+				font-size: large;
+				cursor: pointer;
+				text-align: center;
+			}
+			a {
+				text-decoration: none;
+				color: #f0dfd0;
+				font-size: 24px;
+				cursor: pointer;
+			}
+			.menu-item {
+				padding-bottom: 5px;
+				text-align: center;
+				transition: all 0.2s ease-out;
+			}
+			.menu-item:hover {
+				border-bottom: 2px solid #f0dfd0;
+			}
+			.order-button {
+				display: inline-block;
+				font-family: "Mali";
+				background-color: #f0dfd0;
+				color: #7a4539;
+				padding: 8px 15px;
+				margin: 20px auto;
+				border-radius: 5px;
+				border: none;
+				font-size: 16px;
+				cursor: pointer;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+
+			.order-button:hover {
+				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+					0 10px 10px rgba(0, 0, 0, 0.22);
+			}
+			footer {
+				padding-bottom: 10px;
+				margin: 60px auto 8px;
+				text-align: center;
+				color: #f0dfd0;
+				font-size: 14px;
+			}
+			.heart {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cafe-card">
+			<header>
+				<h1 class="logo">☕ Coffee Lovers</h1>
+			</header>
+			<main class="main">
+				<img
+					class="img"
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/432/original/50-Coffee-Quotes-for-the-Caffeinated-Obsessed.png?1662289320"
+				/>
+				<div class="menu">
+					<ul>
+						<li class="menu-item">
+							<a>menu</a>
+						</li>
+						<li class="menu-item">
+							<a>cafe</a>
+						</li>
+					</ul>
+					<button class="order-button"><strong>Order now</strong></button>
+				</div>
+			</main>
+			<footer>
+				<p>
+					designed and coded with
+					<span class="heart">❤</span>
+					and ☕ by Razie S. Moghaddam
+				</p>
+			</footer>
+		</div>
+		<script>
+			function orderCoffee() {
+				let name = prompt("Hi 😊, What's your name?")
+				let order = prompt("What do you want to order? ")
+				let address = prompt("Please type in your address")
+				if (name.length > 0) {
+					alert("Dear " + name + ", Your order" + " will be sent soon ☕❤")
+				}
+			}
+			let orderButton = document.querySelector(".order-button")
+			orderButton.addEventListener("click", orderCoffee)
+		</script>
+	</body>
+</html>
